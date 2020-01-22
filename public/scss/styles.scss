@@ -93,6 +93,7 @@ body {
 
 //RATING STARS
 #stars {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -223,7 +224,14 @@ body {
     }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 381px) {
+    .tabs__link span {
+        display: none;
+    }
+    .tabs__link svg {
+        width: 30px;
+        height: 30px;
+    }
     .content {
         text-align: center;
         &__title {
