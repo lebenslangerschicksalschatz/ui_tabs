@@ -110,27 +110,44 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center; }
-  .content__circle {
-    position: relative;
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #b7bacd;
-    font-size: 20px; }
-    .content__circle span {
-      z-index: 10; }
-    .content__circle img {
-      position: absolute;
-      z-index: 1;
-      top: 0; }
   .content__text {
     margin-bottom: 20px;
     font-size: 14px;
     color: #b7bacd;
     line-height: 22px; }
+
+.circular-chart {
+  height: 70px;
+  width: 70px; }
+
+.percentage {
+  text-anchor: middle;
+  fill: #b7bacd;
+  font-size: .65rem; }
+
+.circle-bg {
+  fill: transparent;
+  stroke: #b7bacd;
+  stroke-width: 0.5; }
+
+.circle {
+  fill: transparent;
+  stroke-width: 2;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards; }
+
+.circle_1 {
+  stroke: url(#gradient_1); }
+
+.circle_2 {
+  stroke: url(#gradient_2); }
+
+.circle_3 {
+  stroke: url(#gradient_3); }
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100; } }
 
 .game-title {
   color: #ffffff; }
