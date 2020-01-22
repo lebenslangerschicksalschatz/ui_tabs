@@ -1,0 +1,195 @@
+ul li {
+  list-style-type: none; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url(../img/main-bg.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif; }
+
+.game-box {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.4); }
+
+.tabs {
+  width: 100%;
+  min-height: 115px;
+  background-color: #4b536b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .tabs__link {
+    cursor: pointer;
+    width: 100%;
+    max-width: 148px;
+    text-align: center;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #b7bacd;
+    transition: all .2s ease-in-out; }
+    .tabs__link svg path {
+      fill: #b7bacd; }
+    .tabs__link span {
+      margin-top: 12px; }
+    .tabs__link:hover {
+      box-shadow: inset 0px -2px 0px 0px white; }
+    .tabs__link:hover, .tabs__link:hover svg path {
+      color: #ffffff;
+      fill: #ffffff; }
+  .tabs__content {
+    display: none;
+    width: 100%;
+    min-height: 425px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #212534;
+    padding: 58px 40px 60px 47px; }
+
+.tabs__link.active {
+  color: #ffffff;
+  box-shadow: inset 0px -2px 0px 0px white; }
+  .tabs__link.active svg path {
+    fill: #ffffff; }
+
+.tabs__content.current {
+  display: flex; }
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+#stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 132px;
+  margin-right: 10px; }
+
+.star {
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  transition: all .2s ease-in-out; }
+
+#stars > li.star {
+  color: #4b536b; }
+
+#stars > li.star.hover {
+  color: #ffdd3f; }
+
+#stars > li.star.selected {
+  color: #ffdd3f; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 310px; }
+  .content__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .content__circle {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b7bacd;
+    font-size: 20px; }
+    .content__circle span {
+      z-index: 10; }
+    .content__circle img {
+      position: absolute;
+      z-index: 1;
+      top: 0; }
+  .content__text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #b7bacd;
+    line-height: 22px; }
+
+.game-title {
+  color: #ffffff; }
+  .game-title h2 {
+    font-size: 32px;
+    font-weight: 400; }
+  .game-title span {
+    font-size: 14px; }
+
+.buy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .buy__price {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .buy__discount {
+    color: #ffdd3f;
+    font-size: 12px; }
+  .buy__amount {
+    font-size: 32px;
+    color: #ffffff; }
+  .buy__btn {
+    cursor: pointer;
+    width: 100%;
+    height: 55px;
+    max-width: 164px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #00d4be 0%, #1ae77f 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px; }
+    .buy__btn:hover {
+      background: linear-gradient(to left, #00d4be 0%, #1ae77f 100%); }
+
+@media screen and (max-width: 600px) {
+  .tabs__content {
+    flex-direction: column; }
+  .content {
+    max-width: unset; }
+    .content__title {
+      margin-top: 30px; }
+    .content__text {
+      margin: 30px 0; } }
+
+@media screen and (max-width: 370px) {
+  .content {
+    text-align: center; }
+    .content__title {
+      flex-direction: column; }
+    .content__circle {
+      margin-top: 30px; }
+  .buy {
+    flex-direction: column;
+    align-items: center; }
+    .buy__btn {
+      margin-top: 30px; } }
